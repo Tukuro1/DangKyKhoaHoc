@@ -8,7 +8,7 @@ public class Course {
     private String place;
     private LocalDate startdate;
 
-    public Course(int id, String lectureName, String place, LocalDate startdate) {
+    public Course() {
         this.id = id;
         this.lectureName = lectureName;
         this.place = place;
