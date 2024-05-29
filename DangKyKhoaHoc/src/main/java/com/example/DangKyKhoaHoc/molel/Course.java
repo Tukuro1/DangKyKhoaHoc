@@ -3,16 +3,8 @@ package com.example.DangKyKhoaHoc.molel;
 import java.time.LocalDate;
 
 public class Course {
-    private int id;
-    private String lectureName;
-    private String place;
-    private LocalDate startdate;
-
     public Course() {
-        this.id = id;
-        this.lectureName = lectureName;
-        this.place = place;
-        this.startdate = startdate;
+
     }
 
     public int getId() {
@@ -39,21 +31,23 @@ public class Course {
         this.place = place;
     }
 
-    public LocalDate getStartdate() {
-        return startdate;
+    public LocalDate getStartDate() {
+        return startDate;
     }
 
-    public void setStartdate(LocalDate startdate) {
-        this.startdate = startdate;
+    public void setStartDate(LocalDate startDate) {
+        this.startDate = startDate;
     }
 
-    @Override
-    public String toString() {
-        return "Course{" +
-                "id=" + id +
-                ", lectureName='" + lectureName + '\'' +
-                ", place='" + place + '\'' +
-                ", startdate=" + startdate +
-                '}';
+    public Course(int id, String place, String lectureName, LocalDate startDate) {
+        this.id = id;
+        this.place = place;
+        this.lectureName = lectureName;
+        this.startDate = startDate;
     }
+
+    private int id;
+    private String lectureName;
+    private String place;
+    private LocalDate startDate;
 }
