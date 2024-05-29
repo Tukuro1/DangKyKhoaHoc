@@ -1,18 +1,14 @@
 <!DOCTYPE html>
-<html lang="en"
-      xmlns:th="http://www.w3.org/1999/xhtml"
-      layout:decorate="_layout"
-      xmlns:layout="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>Course List</title>
 </head>
 <body>
-<div layout:fragmen="content" class="row">
+<div class="container body-content">
+    <h2>Course List</h2>
     <ul>
-        <li th:each="course : ${listcourse}" th:text="${couse.getStarDate()} + ' _ '
-                                                    + ${course.getLectureName()} + ' _ '
-                                                    + ${course.getPlance()}"></li>
+        <li th:each="course : ${listcourse}" th:text="${course.startDate + ' - ' + course.lectureName + ' , ' + course.place}"></li>
     </ul>
 </div>
 </body>

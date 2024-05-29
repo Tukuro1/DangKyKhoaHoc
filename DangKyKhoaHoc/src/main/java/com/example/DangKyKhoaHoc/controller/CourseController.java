@@ -17,12 +17,13 @@ public class CourseController {
     private CourseService courseService;
 
     @GetMapping("/create")
-    public String create(Model model){
-        model.addAttribute("course",new Course());
+    public String create(Model model) {
+        model.addAttribute("course", new Course());
         return "create";
     }
+
     @PostMapping("/create")
-    public String create(Course newCourse, Model model){
+    public String create(Course newCourse, Model model) {
         courseService.add(newCourse);
         return "redirect:/home";
     }
