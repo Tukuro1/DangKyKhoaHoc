@@ -22,7 +22,7 @@ public class CourseController {
         return "create";
     }
     @PostMapping("/create")
-    public String create(Course newCourse,Model model){
+    public String create(Course newCourse, Model model){
         courseService.add(newCourse);
         return "redirect:/home";
     }
